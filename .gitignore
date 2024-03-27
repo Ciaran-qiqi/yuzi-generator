@@ -3,6 +3,8 @@
 .idea
 target
 yuzi-generator.iml
+yuzi-generator-demo-projects.iml
+yuzi-generator-basic.iml
 
 ### Java template
 # Compiled class file
