@@ -6,7 +6,6 @@ import cn.hutool.core.util.StrUtil;
 import com.yupi.maker.generator.JarGenerator;
 import com.yupi.maker.generator.ScriptGenerator;
 import com.yupi.maker.generator.file.DynamicFileGenerator;
-import com.yupi.maker.generator.file.StaticFileGenerator;
 import com.yupi.maker.meta.Meta;
 import com.yupi.maker.meta.MetaManager;
 import freemarker.template.TemplateException;
