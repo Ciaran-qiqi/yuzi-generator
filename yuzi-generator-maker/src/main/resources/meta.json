@@ -6,8 +6,9 @@
   "author": "qunqun",
   "createTime": "2023-11-22",
   "fileConfig": {
-    "inputRootPath": "D:/code/yuzi-generator/yuzi-generator-demo-projects/acm-template-pro",
+    "inputRootPath": ".source/acm-template-pro",
     "outputRootPath": "generated",
+    "sourceRootPath": "D:/code/yuzi-generator/yuzi-generator-demo-projects/acm-template-pro",
     "type": "dir",
     "files": [
       {
