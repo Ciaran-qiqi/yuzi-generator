@@ -27,7 +27,7 @@ for (int num : arr) {
 sum += num;
 }
 
-System.out.println("nihao" + sum);
+System.out.println("hhhhhhhhhhhhhh" + sum);
     }
 scanner.close();
 }
