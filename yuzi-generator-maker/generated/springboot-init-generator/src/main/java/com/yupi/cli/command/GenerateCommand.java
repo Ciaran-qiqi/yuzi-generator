@@ -82,11 +82,11 @@ public class GenerateCommand implements Callable<Integer> {
     public Integer call() throws Exception {
       System.out.println("输入MySQL数据库配置配置：");
       CommandLine mysqlConfigCommandLine = new CommandLine(MysqlConfigCommand.class);
-      mysqlConfigCommandLine.execute("--password","--url","--username");
+      mysqlConfigCommandLine.execute("--password", "--url", "--username");
         if (needDocs) {
             System.out.println("输入接口文档配置配置：");
             CommandLine docsConfigCommandLine = new CommandLine(DocsConfigCommand.class);
-            docsConfigCommandLine.execute("--description","--title","--version");
+            docsConfigCommandLine.execute("--description", "--title", "--version");
         }
         DataModel dataModel = new DataModel();
         BeanUtil.copyProperties(this, dataModel);

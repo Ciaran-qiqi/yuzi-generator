@@ -15,11 +15,8 @@ public class JarGenerator {
         // 这里一定要拆分！
         ProcessBuilder processBuilder = new ProcessBuilder(mavenCommand.split(" "));
         processBuilder.directory(new File(projectDir));
-
         Map<String, String> environment = processBuilder.environment();
         System.out.println(environment);
-
-
         Process process = processBuilder.start();
 
         // 读取命令的输出
@@ -36,6 +33,6 @@ public class JarGenerator {
     }
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        doGenerate("D:\\code\\yuzi-generator\\yuzi-generator-maker\\generated\\acm-template-pro-generator");
+        doGenerate("C:\\code\\yuzi-generator\\yuzi-generator-maker\\generated\\acm-template-pro-generator");
     }
 }

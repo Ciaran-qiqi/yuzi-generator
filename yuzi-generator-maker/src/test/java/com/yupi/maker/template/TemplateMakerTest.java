@@ -12,15 +12,13 @@ import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 public class TemplateMakerTest {
+
     /**
      * 测试同配置多次生成时，强制变为静态生成
      */
     @Test
-    public void testMakeTemplateBug1()
-    {
+    public void testMakeTemplateBug1() {
         Meta meta = new Meta();
         meta.setName("acm-template-generator");
         meta.setDescription("ACM 示例模板生成器");
@@ -45,11 +43,12 @@ public class TemplateMakerTest {
         List<TemplateMakerModelConfig.ModelInfoConfig> modelInfoConfigList = Arrays.asList(modelInfoConfig1);
         templateMakerModelConfig.setModels(modelInfoConfigList);
 
-        long id = TemplateMaker.makeTemplate(meta, originProjectPath, templateMakerFileConfig, templateMakerModelConfig,null, 10L);
+        long id = TemplateMaker.makeTemplate(meta, originProjectPath, templateMakerFileConfig, templateMakerModelConfig, null, 1735281524670181376L);
         System.out.println(id);
     }
+
     /**
-     * 同文件目录多次生成时，会扫描新的 FTL 文件
+     * 同文件目录多次生成时，再次扫描新的 FTL 文件
      */
     @Test
     public void testMakeTemplateBug2() {
@@ -70,21 +69,27 @@ public class TemplateMakerTest {
         // 模型参数配置
         TemplateMakerModelConfig templateMakerModelConfig = new TemplateMakerModelConfig();
         TemplateMakerModelConfig.ModelInfoConfig modelInfoConfig1 = new TemplateMakerModelConfig.ModelInfoConfig();
-        modelInfoConfig1.setFieldName("className");
+        // - 第 1 次
+//        modelInfoConfig1.setFieldName("className");
+//        modelInfoConfig1.setType("String");
+//        modelInfoConfig1.setReplaceText("BaseResponse");
+        // - 第 2 次
+        modelInfoConfig1.setFieldName("packageName");
         modelInfoConfig1.setType("String");
-        modelInfoConfig1.setReplaceText("BaseResponse");
+        modelInfoConfig1.setReplaceText("com.yupi");
         List<TemplateMakerModelConfig.ModelInfoConfig> modelInfoConfigList = Arrays.asList(modelInfoConfig1);
         templateMakerModelConfig.setModels(modelInfoConfigList);
 
-        long id = TemplateMaker.makeTemplate(meta, originProjectPath, templateMakerFileConfig, templateMakerModelConfig,null, 11L);
+        long id = TemplateMaker.makeTemplate(meta, originProjectPath, templateMakerFileConfig, templateMakerModelConfig, null, 1735281524670181376L);
         System.out.println(id);
     }
+
     /**
      * 使用 JSON 制作模板
      */
     @Test
     public void testMakeTemplateWithJSON() {
-        String configStr = ResourceUtil.readUtf8Str("templateMaker.json");
+        String configStr = ResourceUtil.readUtf8Str("examples/springboot-init/templateMaker.json");
         TemplateMakerConfig templateMakerConfig = JSONUtil.toBean(configStr, TemplateMakerConfig.class);
         long id = TemplateMaker.makeTemplate(templateMakerConfig);
         System.out.println(id);
@@ -134,6 +139,4 @@ public class TemplateMakerTest {
 
         System.out.println(id);
     }
-
-
 }

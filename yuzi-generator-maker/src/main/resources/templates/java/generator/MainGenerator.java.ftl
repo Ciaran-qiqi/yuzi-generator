@@ -1,4 +1,3 @@
-
 package ${basePackage}.generator;
 
 import com.yupi.model.DataModel;
@@ -36,42 +35,39 @@ public class MainGenerator {
         String inputPath;
         String outputPath;
 
-
-
     <#-- 获取模型变量 -->
-        <#list modelConfig.models as modelInfo>
+    <#list modelConfig.models as modelInfo>
         <#-- 有分组 -->
-            <#if modelInfo.groupKey??>
-                <#list modelInfo.models as subModelInfo>
-                    ${subModelInfo.type} ${subModelInfo.fieldName} = model.${modelInfo.groupKey}.${subModelInfo.fieldName};
-                </#list>
-            <#else>
-                ${modelInfo.type} ${modelInfo.fieldName} = model.${modelInfo.fieldName};
-            </#if>
+        <#if modelInfo.groupKey??>
+        <#list modelInfo.models as subModelInfo>
+        ${subModelInfo.type} ${subModelInfo.fieldName} = model.${modelInfo.groupKey}.${subModelInfo.fieldName};
         </#list>
-
+        <#else>
+        ${modelInfo.type} ${modelInfo.fieldName} = model.${modelInfo.fieldName};
+        </#if>
+    </#list>
 
     <#list fileConfig.files as fileInfo>
         <#if fileInfo.groupKey??>
         // groupKey = ${fileInfo.groupKey}
         <#if fileInfo.condition??>
-        if(${fileInfo.condition}) {
+        if (${fileInfo.condition}) {
             <#list fileInfo.files as fileInfo>
-            <@generateFile fileInfo=fileInfo indent="           " />
+            <@generateFile fileInfo=fileInfo indent="            " />
             </#list>
         }
         <#else>
         <#list fileInfo.files as fileInfo>
-        <@generateFile fileInfo=fileInfo indent="       " />
+        <@generateFile fileInfo=fileInfo indent="        " />
         </#list>
         </#if>
         <#else>
         <#if fileInfo.condition??>
         if(${fileInfo.condition}) {
-            <@generateFile fileInfo=fileInfo indent="           " />
+            <@generateFile fileInfo=fileInfo indent="            " />
         }
         <#else>
-        <@generateFile fileInfo=fileInfo indent="       " />
+        <@generateFile fileInfo=fileInfo indent="        " />
         </#if>
         </#if>
     </#list>

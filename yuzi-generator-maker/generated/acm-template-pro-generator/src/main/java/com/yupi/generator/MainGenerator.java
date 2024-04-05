@@ -1,4 +1,3 @@
-
 package com.yupi.generator;
 
 import com.yupi.model.DataModel;
@@ -27,25 +26,22 @@ public class MainGenerator {
         String inputPath;
         String outputPath;
 
-
-
-                boolean needGit = model.needGit;
-                boolean loop = model.loop;
-                    String author = model.mainTemplate.author;
-                    String outputText = model.mainTemplate.outputText;
-
+        boolean needGit = model.needGit;
+        boolean loop = model.loop;
+        String author = model.mainTemplate.author;
+        String outputText = model.mainTemplate.outputText;
 
         // groupKey = git
-        if(needGit) {
-           inputPath = new File(inputRootPath, ".gitignore").getAbsolutePath();
-           outputPath = new File(outputRootPath, ".gitignore").getAbsolutePath();
-           StaticGenerator.copyFilesByHutool(inputPath, outputPath);
-           inputPath = new File(inputRootPath, "README.md").getAbsolutePath();
-           outputPath = new File(outputRootPath, "README.md").getAbsolutePath();
-           StaticGenerator.copyFilesByHutool(inputPath, outputPath);
+        if (needGit) {
+            inputPath = new File(inputRootPath, ".gitignore").getAbsolutePath();
+            outputPath = new File(outputRootPath, ".gitignore").getAbsolutePath();
+            StaticGenerator.copyFilesByHutool(inputPath, outputPath);
+            inputPath = new File(inputRootPath, "README.md").getAbsolutePath();
+            outputPath = new File(outputRootPath, "README.md").getAbsolutePath();
+            StaticGenerator.copyFilesByHutool(inputPath, outputPath);
         }
-       inputPath = new File(inputRootPath, "src/com/yupi/acm/MainTemplate.java.ftl").getAbsolutePath();
-       outputPath = new File(outputRootPath, "src/com/yupi/acm/MainTemplate.java").getAbsolutePath();
-       DynamicGenerator.doGenerate(inputPath, outputPath, model);
+        inputPath = new File(inputRootPath, "src/com/yupi/acm/MainTemplate.java.ftl").getAbsolutePath();
+        outputPath = new File(outputRootPath, "src/com/yupi/acm/MainTemplate.java").getAbsolutePath();
+        DynamicGenerator.doGenerate(inputPath, outputPath, model);
     }
 }

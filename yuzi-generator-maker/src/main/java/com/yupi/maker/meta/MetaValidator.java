@@ -38,14 +38,15 @@ public class MetaValidator {
             // 为 group，不校验
             String groupKey = modelInfo.getGroupKey();
             if (StrUtil.isNotEmpty(groupKey)) {
-                // 生成中间参数 "--author""--outputText"
+                // 生成中间参数
                 List<Meta.ModelConfig.ModelInfo> subModelInfoList = modelInfo.getModels();
                 String allArgsStr = modelInfo.getModels().stream()
                         .map(subModelInfo -> String.format("\"--%s\"", subModelInfo.getFieldName()))
-                        .collect(Collectors.joining(","));
+                        .collect(Collectors.joining(", "));
                 modelInfo.setAllArgsStr(allArgsStr);
                 continue;
             }
+
             // 输出路径默认值
             String fieldName = modelInfo.getFieldName();
             if (StrUtil.isBlank(fieldName)) {

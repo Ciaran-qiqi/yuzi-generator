@@ -5,6 +5,7 @@ target
 yuzi-generator.iml
 yuzi-generator-demo-projects.iml
 yuzi-generator-basic.iml
+application-local.yml
 
 ### Java template
 # Compiled class file

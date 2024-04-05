@@ -39,8 +39,7 @@
       }
     ]
   },
-  "modelConfig":
-  {
+  "modelConfig": {
     "models": [
       {
         "fieldName": "needGit",
@@ -79,4 +78,5 @@
         ]
       }
     ]
-  }}
+  }
+}
