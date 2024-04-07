@@ -1,9 +1,9 @@
 package com.yupi.web.model.dto.generator;
 
+import com.yupi.maker.meta.Meta;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Map;
 
 /**
  * 使用代码生成器请求
@@ -12,17 +12,17 @@ import java.util.Map;
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 @Data
-public class GeneratorUseRequest implements Serializable {
+public class GeneratorMakeRequest implements Serializable {
 
     /**
-     * 生成器的 id
+     * 压缩文件路径
      */
-    private Long id;
+    private String zipFilePath;
 
     /**
-     * 数据模型
+     * 元信息
      */
-    private Map<String, Object> dataModel;
+    private Meta meta;
 
     private static final long serialVersionUID = 1L;
 }
