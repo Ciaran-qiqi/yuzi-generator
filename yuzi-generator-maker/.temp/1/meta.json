@@ -79,16 +79,16 @@
                 "generateType": "dynamic"
             },
             {
-                "inputPath": ".gitignore",
-                "outputPath": ".gitignore",
-                "type": "file",
-                "generateType": "static"
-            },
-            {
                 "inputPath": "src/main/java/com/yupi/springbootinit/exception/BusinessException.java.ftl",
                 "outputPath": "src/main/java/com/yupi/springbootinit/exception/BusinessException.java",
                 "type": "file",
                 "generateType": "dynamic"
+            },
+            {
+                "inputPath": ".gitignore",
+                "outputPath": ".gitignore",
+                "type": "file",
+                "generateType": "static"
             },
             {
                 "inputPath": "src/main/java/com/yupi/springbootinit/common/PageRequest.java.ftl",
@@ -121,17 +121,17 @@
                 "generateType": "static"
             },
             {
-                "inputPath": "src/main/java/com/yupi/springbootinit/service/impl/UserServiceImpl.java.ftl",
-                "outputPath": "src/main/java/com/yupi/springbootinit/service/impl/UserServiceImpl.java",
-                "type": "file",
-                "generateType": "dynamic"
-            },
-            {
                 "inputPath": "src/main/java/com/yupi/springbootinit/config/Knife4jConfig.java.ftl",
                 "outputPath": "src/main/java/com/yupi/springbootinit/config/Knife4jConfig.java",
                 "type": "file",
                 "generateType": "dynamic",
                 "condition": "needDocs"
+            },
+            {
+                "inputPath": "src/main/java/com/yupi/springbootinit/service/impl/UserServiceImpl.java.ftl",
+                "outputPath": "src/main/java/com/yupi/springbootinit/service/impl/UserServiceImpl.java",
+                "type": "file",
+                "generateType": "dynamic"
             },
             {
                 "inputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserRegisterRequest.java.ftl",
@@ -146,26 +146,26 @@
                 "generateType": "dynamic"
             },
             {
-                "inputPath": "src/main/resources/mapper/UserMapper.xml.ftl",
-                "outputPath": "src/main/resources/mapper/UserMapper.xml",
-                "type": "file",
-                "generateType": "dynamic"
-            },
-            {
                 "inputPath": ".idea/misc.xml",
                 "outputPath": ".idea/misc.xml",
                 "type": "file",
                 "generateType": "static"
             },
             {
-                "inputPath": ".idea/vcs.xml",
-                "outputPath": ".idea/vcs.xml",
+                "inputPath": "src/main/resources/mapper/UserMapper.xml.ftl",
+                "outputPath": "src/main/resources/mapper/UserMapper.xml",
                 "type": "file",
-                "generateType": "static"
+                "generateType": "dynamic"
             },
             {
                 "inputPath": "src/test/.DS_Store",
                 "outputPath": "src/test/.DS_Store",
+                "type": "file",
+                "generateType": "static"
+            },
+            {
+                "inputPath": ".idea/vcs.xml",
+                "outputPath": ".idea/vcs.xml",
                 "type": "file",
                 "generateType": "static"
             },
@@ -182,26 +182,26 @@
                 "generateType": "dynamic"
             },
             {
-                "inputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserQueryRequest.java.ftl",
-                "outputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserQueryRequest.java",
-                "type": "file",
-                "generateType": "dynamic"
-            },
-            {
                 "inputPath": ".idea/workspace.xml.ftl",
                 "outputPath": ".idea/workspace.xml",
                 "type": "file",
                 "generateType": "dynamic"
             },
             {
-                "inputPath": "src/main/java/com/yupi/springbootinit/MainApplication.java.ftl",
-                "outputPath": "src/main/java/com/yupi/springbootinit/MainApplication.java",
+                "inputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserQueryRequest.java.ftl",
+                "outputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserQueryRequest.java",
                 "type": "file",
                 "generateType": "dynamic"
             },
             {
                 "inputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserAddRequest.java.ftl",
                 "outputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserAddRequest.java",
+                "type": "file",
+                "generateType": "dynamic"
+            },
+            {
+                "inputPath": "src/main/java/com/yupi/springbootinit/MainApplication.java.ftl",
+                "outputPath": "src/main/java/com/yupi/springbootinit/MainApplication.java",
                 "type": "file",
                 "generateType": "dynamic"
             },
@@ -224,14 +224,14 @@
                 "generateType": "dynamic"
             },
             {
-                "inputPath": "src/main/java/com/yupi/springbootinit/mapper/UserMapper.java.ftl",
-                "outputPath": "src/main/java/com/yupi/springbootinit/mapper/UserMapper.java",
+                "inputPath": "src/main/java/com/yupi/springbootinit/common/ResultUtils.java.ftl",
+                "outputPath": "src/main/java/com/yupi/springbootinit/common/ResultUtils.java",
                 "type": "file",
                 "generateType": "dynamic"
             },
             {
-                "inputPath": "src/main/java/com/yupi/springbootinit/common/ResultUtils.java.ftl",
-                "outputPath": "src/main/java/com/yupi/springbootinit/common/ResultUtils.java",
+                "inputPath": "src/main/java/com/yupi/springbootinit/mapper/UserMapper.java.ftl",
+                "outputPath": "src/main/java/com/yupi/springbootinit/mapper/UserMapper.java",
                 "type": "file",
                 "generateType": "dynamic"
             },
@@ -279,6 +279,12 @@
                 "generateType": "static"
             },
             {
+                "inputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserUpdateRequest.java.ftl",
+                "outputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserUpdateRequest.java",
+                "type": "file",
+                "generateType": "dynamic"
+            },
+            {
                 "inputPath": "src/main/java/com/yupi/springbootinit/config/JsonConfig.java.ftl",
                 "outputPath": "src/main/java/com/yupi/springbootinit/config/JsonConfig.java",
                 "type": "file",
@@ -289,12 +295,6 @@
                 "outputPath": "Dockerfile",
                 "type": "file",
                 "generateType": "static"
-            },
-            {
-                "inputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserUpdateRequest.java.ftl",
-                "outputPath": "src/main/java/com/yupi/springbootinit/model/dto/user/UserUpdateRequest.java",
-                "type": "file",
-                "generateType": "dynamic"
             },
             {
                 "inputPath": "src/main/java/com/yupi/springbootinit/service/UserService.java.ftl",
